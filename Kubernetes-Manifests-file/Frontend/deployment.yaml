@@ -29,6 +29,6 @@ spec:
         imagePullPolicy: Always
         env:
           - name: REACT_APP_BACKEND_URL
-            value: "http://yassineachref.com/api/tasks"
+            value: "http://api-svc.three-tier.svc.cluster.local"
         ports:
         - containerPort: 4000
