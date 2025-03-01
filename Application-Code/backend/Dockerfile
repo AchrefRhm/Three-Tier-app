@@ -1,5 +1,5 @@
 # Backend Dockerfile
-FROM node:14
+FROM node:16
 
 WORKDIR /usr/src/app
 
