@@ -11,7 +11,8 @@ metadata:
 spec:
   ingressClassName: alb
   rules:
-    - http:
+    - host: yassineachref.pfe
+      http:
         paths:
           - path: /api
             pathType: Prefix
@@ -20,31 +21,3 @@ spec:
                 name: api
                 port:
                   number: 5000
-          - path: /healthz
-            pathType: Exact
-            backend:
-              service:
-                name: api
-                port:
-                  number: 5000
-          - path: /ready
-            pathType: Exact
-            backend:
-              service:
-                name: api
-                port:
-                  number: 5000
-          - path: /started
-            pathType: Exact
-            backend:
-              service:
-                name: api
-                port:
-                  number: 5000
-          - path: /
-            pathType: Prefix
-            backend:
-              service:
-                name: frontend
-                port:
-                  number: 4000
