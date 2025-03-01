@@ -29,7 +29,7 @@ spec:
         imagePullPolicy: Always
         env:
           - name: MONGO_URI
-            value: "mongodb+srv://yassine:yassine123@prepai.cggcy.mongodb.net/?retryWrites=true&w=majority&appName=prepai"
+            value: "mongodb+srv://${MONGO_USERNAME}:${MONGO_PASSWORD}@prepai.cggcy.mongodb.net/?retryWrites=true&w=majority&appName=prepai"
         ports:
         - containerPort: 5000
         livenessProbe:
