@@ -5,7 +5,7 @@ metadata:
   namespace: three-tier
 spec:
   capacity: 
-    storage: 5Gi
+    storage: 1Gi
   volumeMode: Filesystem
   accessModes:
     - ReadWriteOnce
