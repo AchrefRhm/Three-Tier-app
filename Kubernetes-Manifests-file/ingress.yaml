@@ -11,8 +11,7 @@ metadata:
 spec:
   ingressClassName: alb
   rules:
-    - host: yassineachref.com
-      http:
+    - http:
         paths:
           - path: /api
             pathType: Prefix
