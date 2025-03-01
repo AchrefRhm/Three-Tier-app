@@ -29,13 +29,13 @@ spec:
         imagePullPolicy: Always
         env:
           - name: MONGO_URI
-            value: "mongodb+srv://$(MONGO_USERNAME):$(MONGO_PASSWORD)@prepai.cggcy.mongodb.net/?retryWrites=true&w=majority&appName=prepai"
-          - name: MONGO_USERNAME  # Add this to inject the username from the secret
+            value: "mongodb+srv://$(MONGO_INITDB_ROOT_USERNAME):$(MONGO_INITDB_ROOT_PASSWORD)@prepai.cggcy.mongodb.net/?retryWrites=true&w=majority&appName=prepai"
+          - name: MONGO_INITDB_ROOT_USERNAME  # Add this to inject the username from the secret
             valueFrom:
               secretKeyRef:
                 name: mongo-sec
                 key: username
-          - name: MONGO_PASSWORD  # Add this to inject the password from the secret
+          - name: MONGO_INITDB_ROOT_PASSWORD  # Add this to inject the password from the secret
             valueFrom:
               secretKeyRef:
                 name: mongo-sec
