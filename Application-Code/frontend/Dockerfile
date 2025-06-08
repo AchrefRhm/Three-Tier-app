@@ -13,7 +13,7 @@ RUN npm install
 COPY . .
 
 # Expose the port the frontend will run on (usually 4000 for Next.js)
-EXPOSE 4000
+EXPOSE 3000
 
 # Run the frontend server (Next.js)
 CMD ["npm", "run", "dev"]
