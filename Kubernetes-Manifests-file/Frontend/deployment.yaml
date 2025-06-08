@@ -27,8 +27,5 @@ spec:
       - name: frontend
         image: 443370706049.dkr.ecr.us-east-1.amazonaws.com/frontend:10
         imagePullPolicy: Always
-        env:
-          - name: REACT_APP_BACKEND_URL
-            value: "http://api-svc.three-tier.svc.cluster.local"
         ports:
         - containerPort: 3000
