@@ -31,4 +31,4 @@ spec:
           - name: REACT_APP_BACKEND_URL
             value: "http://api-svc.three-tier.svc.cluster.local"
         ports:
-        - containerPort: 4000
+        - containerPort: 3000
